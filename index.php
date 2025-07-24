@@ -1,3 +1,5 @@
+<?php include 'config/db.php'; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +8,20 @@
     <title>Feedback Form</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
+
+<header>
+    <div class="">
+        <h1>Mohammed Al Hanjouri</h1>
+        <nav>
+            <ul class="flex space-x-4">
+                <li><a href="index.php" class="text-blue-600 hover:underline">Home</a></li>
+                <li><a href="feedbacks.php" class="text-blue-600 hover:underline">Feedbacks</a></li>
+                <li><a href="" class="text-blue-600 hover:underline">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+</header>
 
 <body class="min-h-screen flex items-center justify-center bg-gray-50">
     <div class="max-w-md w-full space-y-8 p-8 bg-white rounded-lg shadow-md">
