@@ -28,24 +28,61 @@ $feedbacks = mysqli_fetch_all($result, MYSQLI_ASSOC);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Feedbacks</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
 
 <body class="min-h-screen bg-gray-50">
-    <header class="bg-white shadow-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <h1 class="text-xl font-bold text-gray-900">Mohammed Al Hanjouri</h1>
-                <nav>
-                    <ul class="flex space-x-4">
-                        <li><a href="index.php" class="text-blue-600 hover:underline">Home</a></li>
-                        <li><a href="feedbacks.php" class="text-blue-600 hover:underline">Feedbacks</a></li>
-                        <li><a href="" class="text-blue-600 hover:underline">Contact</a></li>
-                    </ul>
-                </nav>
+
+    <header class="bg-gradient-to-r from-blue-600 to-purple-600 shadow-lg sticky top-0 z-50 h-20">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo Section -->
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-md">
+                        <i class="fa-regular fa-comments"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold text-white"><a href="index.php">FeedbackHub</a></h1>
+                        <p class="text-s text-blue-100 hidden sm:block"><a href="https://github.com/mohammed-alhanjouri" target="_blank">by Mohammed Al Hanjouri</a></p>
+                    </div>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-1">
+                    <a href="index.php" class="text-white hover:bg-white hover:text-blue-600 px-4 py-2 rounded-lg text-m font-medium transition duration-200 ease-in-out">
+                        <i class="fa-solid fa-house"></i> Home
+                    </a>
+                    <a href="feedbacks.php" class="text-white hover:bg-white hover:text-blue-600 px-4 py-2 rounded-lg text-m font-medium transition duration-200 ease-in-out">
+                        <i class="fa-solid fa-comment"></i> Feedbacks
+                    </a>
+                    <a href="https://www.instagram.com/mohammed.alhanjouri" target="_blank" class="text-white hover:bg-white hover:text-blue-600 px-4 py-2 rounded-lg text-m font-medium transition duration-200 ease-in-out">
+                        <i class="fa-solid fa-envelope"></i> Contact
+                    </a>
+                    <a href="#" class="bg-white text-blue-600 hover:bg-gray-100 px-4 py-2 rounded-lg text-m font-semibold transition duration-200 ease-in-out shadow-md ml-2">
+                        Dashboard
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-white text-lg hover:text-gray-300 p-2 rounded-lg transition duration-200">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
             </div>
-        </div>
+            
+            <!-- Mobile Navigation Menu -->
+            <div id="mobile-menu" class="md:hidden hidden pb-4">
+                <div class="flex flex-col space-y-2">
+                    <a href="index.php" class="text-black hover:bg-white hover:text-blue-600 px-4 py-2 rounded-lg text-sm font-medium">Home</a>
+                    <a href="feedbacks.php" class="text-black hover:bg-white hover:text-blue-600 px-4 py-2 rounded-lg text-sm font-medium transition duration-200">Feedbacks</a>
+                    <a href="#" class="text-black hover:bg-white hover:text-blue-600 px-4 py-2 rounded-lg text-sm font-medium transition duration-200">Contact</a>
+                    <a href="#" class="bg-white text-blue-600 hover:bg-gray-100 px-4 py-2 rounded-lg text-sm font-semibold">Dashboard</a>
+                </div>
+            </div>
+        </nav>
     </header>
 
     <div class="feedback-container flex items-center justify-center py-12">
