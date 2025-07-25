@@ -1,7 +1,7 @@
 <?php 
 include 'config/db.php'; 
 
-// Form submission handling
+// Form Submission Handling
 
 if (isset($_POST['submit'])){
     // Name Validation
