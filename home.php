@@ -64,14 +64,14 @@ if (isset($_POST['submit'])){
                         <i class="fa-regular fa-comments"></i>
                     </div>
                     <div>
-                        <h1 class="text-xl font-bold text-white"><a href="index.php">FeedbackHub</a></h1>
+                        <h1 class="text-xl font-bold text-white"><a href="home.php">FeedbackHub</a></h1>
                         <p class="text-s text-blue-100 hover:text-gray-100 hidden sm:block"><a href="https://github.com/mohammed-alhanjouri" target="_blank">by Mohammed Al Hanjouri</a></p>
                     </div>
                 </div>
                 
                 <!-- Desktop Navigation -->
                 <div class="hidden md:flex items-center space-x-1">
-                    <a href="index.php" class="text-white hover:bg-white hover:text-blue-600 px-4 py-2 rounded-lg text-m font-medium transition duration-200 ease-in-out">
+                    <a href="home.php" class="text-white hover:bg-white hover:text-blue-600 px-4 py-2 rounded-lg text-m font-medium transition duration-200 ease-in-out">
                         <i class="fa-solid fa-house"></i> Home
                     </a>
                     <a href="feedbacks.php" class="text-white hover:bg-white hover:text-blue-600 px-4 py-2 rounded-lg text-m font-medium transition duration-200 ease-in-out">
