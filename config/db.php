@@ -12,6 +12,8 @@ There is two main ways (APIs) to connect to databases with Vanilla PHP:
 
 */
 
+// Database Configuration
+// Define constants for database connection
 define ('DB_HOST', 'localhost');
 define ('DB_USER', 'Moha');
 define ('DB_PASS', '01001101');

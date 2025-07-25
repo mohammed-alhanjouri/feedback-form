@@ -14,7 +14,7 @@ include 'config/db.php';
 //     ]
 // ];
 
-// Fetch feedbacks from the database
+// Fetch Feedbacks from the Database
 $sql = "SELECT * FROM feedback";
 $result = mysqli_query($connection, $sql);
 $feedbacks = mysqli_fetch_all($result, MYSQLI_ASSOC);
@@ -51,7 +51,7 @@ $feedbacks = mysqli_fetch_all($result, MYSQLI_ASSOC);
     <div class="feedback-container flex items-center justify-center py-12">
         <div class="max-w-md w-full space-y-8 p-8 bg-white rounded-lg shadow-md flex flex-col items-center">
             <h1 class="text-2xl font-bold">Feedbacks</h1>
-            <p class="text-gray-600">Here you can view all the feedbacks submitted by users.</p>
+            <p class="text-gray-600 text-center">Here you can view all the feedbacks submitted by users.</p>
 
             <?php foreach ($feedbacks as $feedback): ?>
                 <div class="card w-full bg-gray-100 p-5 mb-5 rounded-lg shadow">

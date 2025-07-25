@@ -24,6 +24,19 @@ if (isset($_POST['submit'])){
     } else {
         $body = filter_input(INPUT_POST, 'body', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
     }
+
+    // Add Feedback to the Database
+    if (empty($nameError) && empty($emailError) && empty($bodyError)){
+        $sql = "INSERT INTO feedback (name, email, body) VALUES ('$name', '$email', '$body')";
+
+        if (mysqli_query($connection, $sql)) {
+            echo "Feedback submitted successfully!";
+            // Redirect to Feedbacks Page
+            header("Location: feedbacks.php");
+        } else {
+            echo "Error: " . mysqli_error($connection);
+        }
+    }
 }
 
 
@@ -59,6 +72,7 @@ if (isset($_POST['submit'])){
     <div class="form-container flex items-center justify-center py-12">
         <div class="max-w-md w-full space-y-8 p-8 bg-white rounded-lg shadow-md">
             <h1 class="text-3xl font-bold text-center text-gray-900">Feedback Form</h1>
+            <p class="text-gray-600 text-center">We value your feedback! Please fill out the form below.</p>
             <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST" class="space-y-6">
                 <div>
                     <label for="name" class="block text-lg font-medium text-gray-700 mb-2">Name:</label>
