@@ -103,7 +103,7 @@ $feedbacks = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
                 </div>
             <?php endforeach; ?>
-            <a href="index.php" class="text-blue-600 hover:underline">Home</a>
+            <a href="index.php" class="bg-blue-600 text-white px-4 py-2 rounded-lg text-m font-medium hover:bg-blue-700 transition duration-200">Home</a>
         </div>
     </div>
 </body>
