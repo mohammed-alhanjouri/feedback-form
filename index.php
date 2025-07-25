@@ -54,6 +54,7 @@ if (isset($_POST['submit'])){
 
 
 <body class="min-h-screen bg-gray-50">
+    
     <header class="bg-gradient-to-r from-blue-600 to-purple-600 shadow-lg sticky top-0 z-50 h-25">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-25">
@@ -64,7 +65,7 @@ if (isset($_POST['submit'])){
                     </div>
                     <div>
                         <h1 class="text-xl font-bold text-white"><a href="index.php">FeedbackHub</a></h1>
-                        <p class="text-s text-blue-100 hidden sm:block"><a href="https://github.com/mohammed-alhanjouri" target="_blank">by Mohammed Al Hanjouri</a></p>
+                        <p class="text-s text-blue-100 hover:text-gray-100 hidden sm:block"><a href="https://github.com/mohammed-alhanjouri" target="_blank">by Mohammed Al Hanjouri</a></p>
                     </div>
                 </div>
                 
@@ -169,5 +170,25 @@ if (isset($_POST['submit'])){
             </form>
         </div>
     </div> 
+
+    <footer class = "bg-gradient-to-r from-blue-600 to-purple-600 shadow-lg mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 text-center text-white">
+            <p class="text-lg">© 2025 FeedbackHub. All rights reserved.</p>
+            <div class="flex justify-center space-x-10 mt-2">
+                <a href="https://github.com/mohammed-alhanjouri" target="_blank" class="text-white hover:text-gray-300 text-xl">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.instagram.com/mohammed.alhanjouri" target="_blank" class="text-white hover:text-gray-300 text-xl">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="mailto:mohammadalhanjouri@gmail.com" class="text-white hover:text-gray-300 text-xl">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/mohammed-alhanjouri" target="_blank" class="text-white hover:text-gray-300 text-xl">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

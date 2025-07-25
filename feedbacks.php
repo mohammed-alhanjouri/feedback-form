@@ -35,9 +35,9 @@ $feedbacks = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
 <body class="min-h-screen bg-gray-50">
 
-    <header class="bg-gradient-to-r from-blue-600 to-purple-600 shadow-lg sticky top-0 z-50 h-20">
+    <header class="bg-gradient-to-r from-blue-600 to-purple-600 shadow-lg sticky top-0 z-50 h-25">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
+            <div class="flex justify-between items-center h-25">
                 <!-- Logo Section -->
                 <div class="flex items-center space-x-3">
                     <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-md">
@@ -45,7 +45,7 @@ $feedbacks = mysqli_fetch_all($result, MYSQLI_ASSOC);
                     </div>
                     <div>
                         <h1 class="text-xl font-bold text-white"><a href="index.php">FeedbackHub</a></h1>
-                        <p class="text-s text-blue-100 hidden sm:block"><a href="https://github.com/mohammed-alhanjouri" target="_blank">by Mohammed Al Hanjouri</a></p>
+                        <p class="text-s text-blue-100 hover:text-gray-100 hidden sm:block"><a href="https://github.com/mohammed-alhanjouri" target="_blank">by Mohammed Al Hanjouri</a></p>
                     </div>
                 </div>
                 
@@ -85,6 +85,14 @@ $feedbacks = mysqli_fetch_all($result, MYSQLI_ASSOC);
         </nav>
     </header>
 
+    <!-- Add some JavaScript for mobile menu toggle -->
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
     <div class="feedback-container flex items-center justify-center py-12">
         <div class="max-w-md w-full space-y-8 p-8 bg-white rounded-lg shadow-md flex flex-col items-center">
             <h1 class="text-2xl font-bold">Feedbacks</h1>
@@ -106,5 +114,25 @@ $feedbacks = mysqli_fetch_all($result, MYSQLI_ASSOC);
             <a href="index.php" class="bg-blue-600 text-white px-4 py-2 rounded-lg text-m font-medium hover:bg-blue-700 transition duration-200">Home</a>
         </div>
     </div>
+
+    <footer class = "bg-gradient-to-r from-blue-600 to-purple-600 shadow-lg mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 text-center text-white">
+            <p class="text-lg">© 2025 FeedbackHub. All rights reserved.</p>
+            <div class="flex justify-center space-x-10 mt-2">
+                <a href="https://github.com/mohammed-alhanjouri" target="_blank" class="text-white hover:text-gray-300 text-xl">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.instagram.com/mohammed.alhanjouri" target="_blank" class="text-white hover:text-gray-300 text-xl">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="mailto:mohammadalhanjouri@gmail.com" class="text-white hover:text-gray-300 text-xl">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/mohammed-alhanjouri" target="_blank" class="text-white hover:text-gray-300 text-xl">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
